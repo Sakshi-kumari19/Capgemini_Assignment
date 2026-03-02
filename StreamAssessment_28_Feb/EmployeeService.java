@@ -49,8 +49,9 @@ public class EmployeeService {
      }
      //5.
      public List<Employee> salByDesc(){
-         List li = EmployeeRepository.getEmployees().stream().sorted((e1, e2)->Double.compare(e2.getSalary(), e1.getSalary())).collect(Collectors.toList());
+         List li = EmployeeRepository.getEmployees().stream().sorted((e1, e2)->Double.compare(e2.getSalary(), e1.getSalary())).toList();
          return li;
      }
 
 }
+
