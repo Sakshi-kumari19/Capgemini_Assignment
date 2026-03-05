@@ -1,11 +1,29 @@
 package com.cg.bean;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Employee {
+	@Id
+	@Column(name="Eid")
 	private String empid;
 	private String name; 
 	private String email;
 	private String dob;
-	
+
+	@Override
+	public String toString() {
+		return "Employee{" +
+				"empid='" + empid + '\'' +
+				", name='" + name + '\'' +
+				", email='" + email + '\'' +
+				", dob='" + dob + '\'' +
+				'}';
+	}
+
+	public Employee(){}
 	public Employee(String name, String email, String dob) {
 		this.name = name;
 		this.email = email;

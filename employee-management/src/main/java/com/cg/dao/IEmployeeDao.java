@@ -10,6 +10,6 @@ public interface IEmployeeDao {
 	public String saveEmployee(Employee emp);
 	public Employee findEmployee(String empid) throws SQLException;
 	public List<Employee> getAll();
-	public String updateEmployeeName(String empid, String newName);
+	public String updateEmployeeName(Employee emp);
 	public String deleteEmployee(String empid);
 }

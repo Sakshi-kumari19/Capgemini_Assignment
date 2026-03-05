@@ -49,11 +49,11 @@ public class EmployeeService implements IEmployeeService {
 	}
 
 	@Override
-	public String updateEmployeeName(String eid, String name) {
-		if(eid==null || eid.length()<4 || name==null || name.length()<4){
-			return "Invalid value";
+	public String updateEmployeeName(Employee emp) {
+		if(emp.getName()==null && emp.getEmail()==null && emp.getDob()==null){
+			return "No value provided to update...";
 		}
-		return dao.updateEmployeeName(eid,name);
+		return dao.updateEmployeeName(emp);
 	}
 
 	@Override
